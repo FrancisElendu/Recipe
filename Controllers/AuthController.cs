@@ -23,15 +23,16 @@ namespace Recipe.Controllers
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IConfiguration _config;
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly SignInManager<ApplicationUser> _signInManager;
+        //private readonly UserManager<ApplicationUser> _userManager;
+        //private readonly SignInManager<ApplicationUser> _signInManager;
 
-        public AuthController(IUnitOfWork unitOfWork, IConfiguration config, UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
+        public AuthController(IUnitOfWork unitOfWork, IConfiguration config)
+            //, UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
         {
             _unitOfWork = unitOfWork;
             _config = config;
-            _userManager = userManager;
-            _signInManager = signInManager;
+           // _userManager = userManager;
+            //_signInManager = signInManager;
         }
 
         [HttpPost("register")]
